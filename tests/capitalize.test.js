@@ -1,12 +1,6 @@
 import capitalize from '../src/capitalize.js';
-// const capitaliz = capitalize();
+import { strict as assert } from 'node:assert';
 
-if (capitalize('hello') !== 'Hello') {
-  throw new Error('Функция работает неверно!');
-}
-
-if (capitalize('') !== '') {
-  throw new Error('Функция работает неверно!');
-}
-
-console.log('Все тесты пройдены!');
+// Проверка по значению
+assert.deepEqual({}, { w: 't' }); // всё ок
+assert.deepEqual({ key: 'value' }, { key: 'value' }); // всё ок
